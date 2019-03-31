@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="static/css/theme.css">
+		<link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	</head>
+	<body>
+		<div id="app">
+			<div class="container-fluid">
+				<select-server v-on:connect="(ip) => { connect(ip) }" v-if="!connected"></select-server>
+				<select-nickname v-on:selected="(nickname) => { selectNickname(nickname) }" v-if="nickname == '' && connected"></select-nickname>
+				<div class="row" v-if="nickname != '' && connected">
+					<div class="col-4">
+						<users
+							v-bind:users="users"
+							v-bind:dialogs="dialogs"
+							v-bind:current-interlocutor-id="currentInterlocutorId"
+							v-on:open-dialog="(InterlocutorId) => { openDialog(InterlocutorId) }"/>
+					</div>
+					<div class="col-8 main">
+						<dialogs
+							v-bind:users="users"
+							v-bind:dialogs="dialogs"
+							v-bind:current-interlocutor-id="currentInterlocutorId"
+							v-on:send-message="(message) => { sendMessage(message)}"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Vendor -->
+		<script src="static/js/pidcrypt/dist.js"></script>
+		<script src="static/js/jquery-3.3.1.min.js"></script>
+		<script src="static/s/bootstrap.js"></script>
+		<script src="static/js/socket.io.min.js"></script>
+		<script src="static/js/vue.js"></script>
+		<!-- /Vendor -->
+
+		<!-- Components -->
+		<script src="static/js/components/select-server.js"></script>
+		<script src="static/js/components/select-nickname.js"></script>
+		<script src="static/js/components/users.js"></script>
+		<script src="static/js/components/dialogs.js"></script>
+		<!-- /Components -->
+
+		<script src="static/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+.select-server {
+	margin-top: 240px;
+}
+
+.select-nickname {
+	margin-top: 240px;
+}
+
+.users {
+	list-style: none;
+	padding: 0px;
+	overflow-y: scroll;
+	height: 500px;
+}
+
+.users li {
+	padding: 15px;
+	background-color: #eee;
+}
+
+.users .closed:hover {
+	background-color: #f6f6f6;
+	cursor: pointer;
+}
+
+.users .opened {
+	background-color: #f6f6f6;
+	cursor: not-allowed;
+}
+
+.no-dialog {
+	height: 500px;
+	text-align: center;
+}
+
+.no-dialog h4 {
+	line-height: 500px;
+	color: #777;
+	user-select: none;
+}
+
+.no-user-select {
+	user-select: none;
+}
+
+.no-messages {
+	height: 400px;
+	text-align: center;
+}
+
+.no-messages h5 {
+	line-height: 400px;
+	color: #777;
+	user-select: none;
+}
+
+.messages {
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.messages div {
+	margin-bottom: 5px;
+	padding: 1px;
+}
+
+.messages .incoming {
+	text-align: left;
+}
+
+.messages .outgoing {
+	text-align: right;
+}
+
+.messages div span {
+	display: inline-block;
+	max-width: 45%;
+	padding: 7px;
+	padding-bottom: 3px;
+	border-radius: 7px;
+	text-align: left;
+}
+
+.messages div span .time {
+	font-size: 10px;
+}
+
+.messages .incoming span {
+	background: #DBDBDB;
+}
+
+.messages .outgoing span {
+	background: #389059;
+	color: #fff;
+}
+
+.send-form button {
+	margin-top: 7px;
+}

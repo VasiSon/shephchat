@@ -1,0 +1,11 @@
+{
+  "name": "messager",
+  "version": "1.0.0",
+  "description": "Мессенджер с шифрованием",
+  "author": "Golovchenko N.S.",
+  "main": "server.js",
+  "scripts": {},
+  "dependencies": {
+    "socket.io": "^2.1.0"
+  }
+}

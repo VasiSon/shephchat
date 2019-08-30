@@ -1,11 +1,23 @@
 {
-  "name": "messager",
-  "version": "1.0.0",
-  "description": "Мессенджер с шифрованием",
-  "author": "Golovchenko N.S.",
-  "main": "server.js",
-  "scripts": {},
+  "name": "shephchat-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "socket.io": "^2.1.0"
+    "cryptico": "^1.0.2",
+    "fs": "0.0.1-security",
+    "ip": "^1.1.5",
+    "is-base64": "^0.1.0",
+    "js-base64": "^2.5.1",
+    "js-service-container": "0.0.1",
+    "js-sha3": "^0.8.0",
+    "socket.io": "^2.2.0",
+    "var": "^0.3.2"
   }
 }
